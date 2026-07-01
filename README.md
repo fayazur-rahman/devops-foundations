@@ -1,4 +1,4 @@
-# devops-foundations
+# Devops Foundations
 
 Personal repository tracking Phase 0 of a structured DevOps learning roadmap.
 Demonstrates Linux fluency, Git workflow discipline, Bash scripting, and Docker
