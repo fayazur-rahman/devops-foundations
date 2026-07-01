@@ -6,7 +6,7 @@
 ## Identity Setup
 ```bash
 git config --global user.name "Fayazur Rahman"
-git config --global user.email "fayazur8@gmail.com"
+git config --global user.email "xxx@gmail.com"
 git config --global init.defaultBranch main
 ```
 
