@@ -1,0 +1,26 @@
+gitignore
+# Secrets — NEVER commit
+.env
+*.pem
+*.key
+id_rsa
+id_ed25519
+credentials
+
+
+# Dependencies
+node_modules/
+vendor/
+
+
+# Build output
+dist/
+build/
+.next/
+
+
+# Noise
+*.log
+.DS_Store
+*.swp
+
