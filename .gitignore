@@ -18,9 +18,15 @@ dist/
 build/
 .next/
 
-
 # Noise
 *.log
 .DS_Store
 *.swp
+*~
+.vscode/
+
+
+# Drill artifacts
+drills/tmp/
+*.img
 

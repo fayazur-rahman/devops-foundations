@@ -1,63 +1,64 @@
-# Devops Foundations
+# devops-foundations
 
-Personal repository tracking Phase 0 of a structured DevOps learning roadmap.
-Demonstrates Linux fluency, Git workflow discipline, Bash scripting, and Docker
-fundamentals — the operational foundation for everything that comes after.
 
----
+Phase 0 of a six-month roadmap to becoming an employable Junior DevOps Engineer.
+This repo holds the toolbelt: Linux fluency, Bash, Docker, and a professional
+Git workflow — plus write-ups of failures I broke on purpose and recovered.
 
-## What's here
 
-| Directory | Contents |
+## Why this repo exists
+Every later phase sits on two assumptions: that I can read a machine I've never
+seen, and that I can control a repository safely. This is where both were built.
+The notes are written for my future self — each command recorded with *when I'd
+reach for it*, not just what it does.
+
+
+## Structure
+
+
+| Folder | Contents |
 |---|---|
-| `linux/` | Command reference and log-reading notes |
-| `git/` | Branch workflow, commit conventions, revert/reset decision notes |
-| `bash/` | Scripts — monitoring, control flow (populated in Week 2) |
-| `docker/` | Dockerfiles, compose files, build notes (populated in Week 3) |
-
----
-
-## Phase 0 Exit Criteria
-
-Tracking against the roadmap's definition of "phase complete":
-
-- [ ] Shell-fluent — navigate, read logs, diagnose permissions from memory
-- [ ] Bash loop + conditional — a real monitoring script
-- [ ] Multi-stage Docker image — built and verified smaller than single-stage
-- [ ] Billing alarm active on AWS
-- [ ] This repo: public, structured, documented
-
----
-
-## Key Concepts Covered
-
-**Linux:** filesystem layout, permissions (chmod/chown), process management
-(ps/kill/systemctl), disk/memory/network diagnostics, log reading and piping.
-
-**Git:** SSH authentication, branch workflow (feature branches, merge, delete),
-commit message convention, revert vs reset, annotated tags.
-
-**Failure drills:** disk full, permission denied, service won't start — each
-worked through the incident method: symptoms → logs → investigation →
-root cause → fix → prevention.
-
----
+| `linux/` | Command reference: navigation, logs, permissions, processes, systemd, triage |
+| `bash/` | Scripts — including `monitor.sh`, a disk/memory/service health checker |
+| `docker/` | Dockerfiles, Compose notes, volume/network notes |
+| `git/` | Workflow notes: SSH auth, branching, commit convention, rollback rules |
+| `drills/` | Failure drills — symptoms, investigation, root cause, fix, prevention |
 
 
-## THE SPIRAL MAP
- 
-| Phase | Weeks | New layer | Reuses |
-|---|---|---|---|
-| 0 — Tools | 1–3 | Linux · Git · Docker · Bash · env | — |
-| 1 — First deploy | 4–7 | Containers · first CI/CD · first cloud deploy | P0 |
-| 2 — IaC | 8–12 | Terraform · Redis · monitoring · logging · multi-tier | P0–1 |
-| 3 — Orchestration | 13–18 | Kubernetes (EKS) · microservices · broker · Prometheus/Grafana · GitOps | P0–2 |
-| 4 — Scale & secure | 19–24 | GCP · DevSecOps · autoscaling · CDN · Next.js | P0–3 |
- 
----
+## Failure drills
 
-## How to use this
 
-The notes here are a personal reference, not a tutorial. Each command comes
-from hands-on practice, not copying — so this grows as the work progresses.
+Real DevOps is recovery, not deployment. Each drill follows the same method:
+**symptoms → logs → investigation → root cause → fix → prevention.**
+
+
+| Drill | Failure | Write-up |
+|---|---|---|
+| 01 | Disk full | [`drills/01-disk-full.md`](drills/01-disk-full.md) |
+| 02 | Permission denied | [`drills/02-permission-denied.md`](drills/02-permission-denied.md) |
+| 03 | Service won't start | [`drills/03-service-wont-start.md`](drills/03-service-wont-start.md) |
+
+
+## Phase 0 exit criteria
+
+
+- [ ] Shell-fluent — navigate, read, and filter logs without reference
+- [ ] Bash script with a loop and a conditional
+- [ ] Multi-stage Docker image, meaningfully smaller than single-stage
+- [ ] AWS billing alarm + monthly budget active
+- [ ] This repo public with a real README
+
+
+## Environment
+
+
+Native Ubuntu 24 (dual-boot alongside Windows).
+
+
+## Roadmap
+
+
+Phase 0 Reboot · Phase 1 First deploy (EC2, RDS, CI/CD) · Phase 2 Laravel on
+Terraform · Phase 3 Microservices on Kubernetes · Phase 4 Scale, secure,
+multi-cloud · Phase 5 Get hired.
 

@@ -1,13 +1,13 @@
 # Git Workflow Notes
-*Started 2026-06-29 -- P0-W1-D3*
 
 ---
 
 ## Identity Setup
 ```bash
 git config --global user.name "Fayazur Rahman"
-git config --global user.email "xxx@gmail.com"
+git config --global user.email "fayazur8@gmail.com"
 git config --global init.defaultBranch main
+
 ```
 
 ## SSH Authentication
@@ -42,6 +42,7 @@ git add filename              # stage one file
 git commit -m "message"       # commit with inline message
 git push origin branch-name   # push branch to GitHub
 git log --oneline             # compact commit history
+
 ```
 
 ## Commit & Branching Model (summary)
@@ -61,9 +62,11 @@ Explain WHY in the body when the change isn't self-evident from the diff.
 **Tags:** annotated only (`git tag -a vX.Y.Z -m "message"`), used to mark
 release points. Push explicitly with `git push origin <tag>` or `--tags`.
 ```bash
+
 git tag -a v0.1.0 -m "Phase 0 complete: Linux, Git, Docker fundamentals"
 git push origin v0.1.0          # push a single tag
 git push --tags                 # push all tags
+
 git tag                         # list all tags
 git show v0.1.0                 # see what the tag points to
 ```
@@ -72,14 +75,12 @@ git show v0.1.0                 # see what the tag points to
 ```bash
 git status           # what's changed, what's staged, what branch am I on
 git diff             # exact line-by-line changes, unstaged
+
 git diff --staged    # exact line-by-line changes, staged (about to be committed)
 git stash            # save current changes, return to clean working dir
 git stash list       # see what's stashed
 git stash pop        # bring back the most recent stash, remove it from the list
+
 git stash apply      # bring back the most recent stash, keep it in the list
 git stash drop       # remove a single entry
 git stash clear      # remove all entries
-```
-
-
-

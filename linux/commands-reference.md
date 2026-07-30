@@ -1,5 +1,5 @@
 # Linux Commands Reference
-*Personal cheat sheet — started 2026-06-29*
+*Personal cheat sheet*
 
 ---
 
@@ -91,3 +91,7 @@ fix the problem
 systemctl restart <service>
 systemctl status <service>   → confirm running
 ```
+
+
+
+
