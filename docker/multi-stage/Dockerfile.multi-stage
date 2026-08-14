@@ -1,0 +1,15 @@
+FROM python:3.12 AS builder
+WORKDIR /install
+
+RUN pip install --no-cache-dir --prefix=/install/deps requests 
+
+FROM python:3.12-slim
+WORKDIR /app
+
+COPY --from=builder /install/deps /usr/local
+COPY app.py .
+RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
+USER appuser 
+EXPOSE 8080
+ENTRYPOINT ["python", "app.py"]
+CMD []
